@@ -1,12 +1,12 @@
 {
   "name": "chopi-chan",
   "version": "0.1.0",
-  "description": "子育て・妊娠に関する情報を手元で整理・精査・検索・検証するローカルナレッジベース",
+  "description": "子育て・妊娠に関する情報を整理・精査・検索・検証するナレッジベース（静的・GitHub Pages対応）",
   "type": "module",
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "dev": "node --watch server.js"
+    "preview": "node server.js"
   },
   "engines": {
     "node": ">=18"

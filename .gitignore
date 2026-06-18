@@ -2,6 +2,6 @@ node_modules/
 *.log
 .DS_Store
 
-# 個人データのバックアップ・エクスポートはここに置くと無視されます
-data/backup/
-data/*.local.json
+# 個人データのバックアップ・エクスポートを置く場合（任意）
+backup/
+*.local.json
