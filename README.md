@@ -10,13 +10,18 @@
 ## 🌐 GitHub Pages で使う（おすすめ）
 
 このリポジトリには Pages 自動デプロイのワークフロー（`.github/workflows/pages.yml`）が入っています。
-push されると自動でビルド・公開されます。
+
+**初回だけ手動の有効化が必要です**（GitHub の仕様上、Pages はリポジトリ所有者が一度
+オンにする必要があり、ワークフローからは自動でオンにできません）。
+
+1. リポジトリの **Settings → Pages** を開く。
+2. **Build and deployment → Source** を **「GitHub Actions」** に変更する。
+3. これで Pages が有効化されます。あとは **Actions** タブで「Deploy to GitHub Pages」を
+   **Re-run**（または何かを push）すると公開されます。
+
+一度有効化すれば、以降は push のたびに自動で再デプロイされます。
 
 - 公開URL: `https://b-w-hiroki.github.io/chopi-chan/`
-- 初回だけ、リポジトリの **Settings → Pages → Build and deployment → Source** を
-  **「GitHub Actions」** にしてください（ワークフローが自動で有効化を試みますが、
-  反映されない場合はここを切り替えれば確実です）。
-- 公開後は **Actions** タブで「Deploy to GitHub Pages」の実行状況を確認できます。
 
 > ⚠ Pages サイト自体は公開されますが、**入力したデータはあなたのブラウザ内（localStorage）にだけ
 > 保存され、サーバーには一切送信されません**。同梱のサンプル以外は他の人から見えません。

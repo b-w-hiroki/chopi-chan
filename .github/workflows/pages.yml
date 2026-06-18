@@ -28,9 +28,6 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
-        with:
-          # Pages がまだ有効でなければ自動で有効化する
-          enablement: true
 
       - name: Upload static site (site/)
         uses: actions/upload-pages-artifact@v3
