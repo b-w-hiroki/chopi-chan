@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ちょぴちゃん — 子育て情報ノート</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍙</text></svg>" />
+</head>
+<body>
+  <header>
+    <div class="header-row">
+      <div class="brand">
+        <h1>🍙 ちょぴちゃん</h1>
+        <span class="sub">子育て・妊娠 情報ノート</span>
+      </div>
+      <input id="search" class="search" type="search" placeholder="キーワード検索（タイトル・要点・タグ・本文）" />
+      <button id="addBtn" class="btn primary">＋ 新規追加</button>
+      <button id="exportBtn" class="btn ghost" title="JSONとして書き出し">⬇ 書出</button>
+      <button id="importBtn" class="btn ghost" title="JSONを読み込み（マージ）">⬆ 読込</button>
+      <input id="importFile" type="file" accept="application/json" hidden />
+    </div>
+  </header>
+
+  <main class="layout">
+    <div class="health-banner">
+      ⚠ これは<strong>個人の整理・学習用メモ</strong>です。医療上の判断は必ず公的機関の最新情報や、かかりつけ医・助産師など専門家に確認してください。
+    </div>
+
+    <div id="stats" class="stats"></div>
+
+    <div class="filters">
+      <select id="filterCategory"><option value="">すべてのカテゴリ</option></select>
+      <select id="filterStatus"><option value="">すべての検証状態</option></select>
+      <select id="filterStance"><option value="">すべての推奨度</option></select>
+      <select id="sortBy">
+        <option value="updated">更新が新しい順</option>
+        <option value="created">追加が新しい順</option>
+        <option value="title">タイトル順</option>
+        <option value="status">検証が必要な順</option>
+      </select>
+      <label class="chip"><input type="checkbox" id="needsAttention" /> 要対応のみ</label>
+    </div>
+
+    <div id="list" class="list"></div>
+  </main>
+
+  <!-- 編集モーダル -->
+  <div id="editorOverlay" class="overlay">
+    <div class="modal">
+      <h2 id="editorTitle">情報を追加</h2>
+      <form id="editorForm">
+        <div class="field">
+          <label>タイトル <span style="color:var(--rejected)">*</span></label>
+          <input type="text" name="title" required placeholder="例：肉を切ったまな板はすぐ洗って熱湯消毒" />
+        </div>
+        <div class="field">
+          <label>要点・結論（一言で）</label>
+          <input type="text" name="conclusion" placeholder="例：生肉を扱った調理器具は他の食材に使う前に洗浄・加熱消毒する" />
+        </div>
+        <div class="row3">
+          <div class="field">
+            <label>カテゴリ</label>
+            <select name="category" id="f_category"></select>
+          </div>
+          <div class="field">
+            <label>推奨度</label>
+            <select name="stance" id="f_stance"></select>
+          </div>
+          <div class="field">
+            <label>検証状態</label>
+            <select name="status" id="f_status"></select>
+          </div>
+        </div>
+        <div class="field">
+          <label>詳細・背景・理由</label>
+          <textarea name="detail" placeholder="なぜそうなのか、条件、例外などをメモ"></textarea>
+        </div>
+        <div class="field">
+          <label>タグ（カンマ区切り）</label>
+          <input type="text" name="tags" placeholder="例：食中毒, サルモネラ, キッチン" />
+        </div>
+
+        <fieldset>
+          <legend>出典・ソース</legend>
+          <div id="sourcesList"></div>
+          <button type="button" id="addSource" class="tiny-add">＋ ソースを追加</button>
+          <div id="sourceHint" class="verify-hint"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>検証チェックリスト</legend>
+          <div id="checklist" class="checklist"></div>
+        </fieldset>
+
+        <div class="field">
+          <label>矛盾・異説のメモ（ソース間で見解が割れる点）</label>
+          <textarea name="conflictNotes" placeholder="例：Aサイトは加熱必須、Bサイトは表面を洗えばOKとしている → 公的機関の見解を優先"></textarea>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label>検証した人</label>
+            <input type="text" name="verifiedBy" placeholder="例：自分 / パートナー" />
+          </div>
+          <div class="field">
+            <label>検証日</label>
+            <input type="text" name="verifiedDate" placeholder="例：2026-06-18" />
+          </div>
+        </div>
+
+        <div class="modal-foot">
+          <button type="button" id="deleteBtn" class="btn danger" hidden>削除</button>
+          <button type="button" id="cancelBtn" class="btn ghost">キャンセル</button>
+          <button type="submit" class="btn primary">保存</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 詳細モーダル -->
+  <div id="detailOverlay" class="overlay">
+    <div class="modal" id="detailModal"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

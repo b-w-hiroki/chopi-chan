@@ -1,0 +1,157 @@
+[
+  {
+    "id": "11111111-1111-4111-8111-111111111111",
+    "title": "生肉を切ったまな板・包丁はすぐ洗い、熱湯消毒する",
+    "category": "衛生・食中毒予防",
+    "stance": "forbid",
+    "status": "verified",
+    "conclusion": "生肉・生魚を扱った調理器具は、他の食材（特に生で食べる野菜など）に使う前に必ず洗剤で洗い、熱湯または塩素系漂白剤で消毒する。使い回しは厳禁。",
+    "detail": "生肉にはカンピロバクター・サルモネラ・腸管出血性大腸菌などが付着していることがある。同じまな板で生肉→サラダ野菜の順に切ると菌が移る（二次汚染）。\n\n対策:\n・肉・魚用と野菜用でまな板を分ける\n・使ったらすぐ洗剤で洗い、熱湯をかける（または台所用漂白剤に浸ける）\n・妊娠中・乳幼児は重症化しやすいので特に徹底する",
+    "conflictNotes": "",
+    "tags": [
+      "食中毒",
+      "二次汚染",
+      "キッチン",
+      "カンピロバクター",
+      "サルモネラ"
+    ],
+    "sources": [
+      {
+        "title": "農林水産省「お肉はよく焼いて食べよう」「家庭でできる食中毒予防」",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/",
+        "type": "公的機関",
+        "credibility": "high",
+        "accessedDate": "2026-06-18",
+        "note": "二次汚染の防止と器具の洗浄・消毒について記載"
+      },
+      {
+        "title": "厚生労働省「家庭でできる食中毒予防の6つのポイント」",
+        "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/shokuhin/syokuchu/",
+        "type": "公的機関",
+        "credibility": "high",
+        "accessedDate": "2026-06-18",
+        "note": "調理器具は洗って熱湯をかけると安全、とされている"
+      }
+    ],
+    "checklist": {
+      "multiSource": true,
+      "highCredSource": true,
+      "noConflict": true,
+      "dateChecked": true,
+      "contextOk": true
+    },
+    "verifiedBy": "自分",
+    "verifiedDate": "2026-06-18",
+    "createdAt": "2026-06-18T00:00:00.000Z",
+    "updatedAt": "2026-06-18T00:00:00.000Z"
+  },
+  {
+    "id": "22222222-2222-4222-8222-222222222222",
+    "title": "妊娠中は生ハム・加熱していないナチュラルチーズを避ける（リステリア）",
+    "category": "妊娠中の食事",
+    "stance": "avoid",
+    "status": "verified",
+    "conclusion": "妊娠中はリステリア食中毒の予防のため、生ハム・パテ・スモークサーモン・加熱殺菌していないナチュラルチーズなどは避け、加熱したものを選ぶ。",
+    "detail": "リステリア菌は塩分に強く冷蔵庫内でも増えるため、加熱せず食べる食品で注意が必要。妊娠中は感染しやすく、流産・死産や新生児への感染につながることがある。\n\n避けたい例: ナチュラルチーズ（カマンベール等の一部）、生ハム、肉や魚のパテ、スモークサーモン、未殺菌牛乳。\n加熱すれば食べられるものも多い。",
+    "conflictNotes": "",
+    "tags": [
+      "リステリア",
+      "妊娠",
+      "チーズ",
+      "生ハム"
+    ],
+    "sources": [
+      {
+        "title": "厚生労働省「これからママになるあなたへ 食べ物について知っておいてほしいこと」",
+        "url": "https://www.mhlw.go.jp/topics/syokuchu/dl/100526-1b.pdf",
+        "type": "公的機関",
+        "credibility": "high",
+        "accessedDate": "2026-06-18",
+        "note": "リステリアと避けたい食品の一覧あり"
+      }
+    ],
+    "checklist": {
+      "multiSource": false,
+      "highCredSource": true,
+      "noConflict": true,
+      "dateChecked": true,
+      "contextOk": true
+    },
+    "verifiedBy": "自分",
+    "verifiedDate": "2026-06-18",
+    "createdAt": "2026-06-18T00:00:01.000Z",
+    "updatedAt": "2026-06-18T00:00:01.000Z"
+  },
+  {
+    "id": "33333333-3333-4333-8333-333333333333",
+    "title": "妊娠中のカフェインは控えめに（目安あり）",
+    "category": "妊娠中の食事",
+    "stance": "caution",
+    "status": "disputed",
+    "conclusion": "妊娠中のカフェインは控えめに。1日の上限の目安は機関によって異なる（WHO等は約300mg、英国機関は200mg程度）。コーヒー約1〜2杯が目安。",
+    "detail": "カフェインは胎盤を通過し、過剰摂取は低出生体重等のリスクと関連が指摘される。コーヒー・紅茶・緑茶・エナジードリンク・チョコにも含まれる点に注意。",
+    "conflictNotes": "上限値が機関で割れている: WHO 約300mg/日、英国FSA 200mg/日。安全側に倒すなら少ない方（200mg）を目安にするのが無難。最終的な量はかかりつけ医に確認したい。",
+    "tags": [
+      "カフェイン",
+      "コーヒー",
+      "妊娠"
+    ],
+    "sources": [
+      {
+        "title": "農林水産省「カフェインの過剰摂取について」",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/risk_analysis/priority/hazard_chem/caffeine.html",
+        "type": "公的機関",
+        "credibility": "high",
+        "accessedDate": "2026-06-18",
+        "note": "各国機関の上限目安を比較紹介している"
+      }
+    ],
+    "checklist": {
+      "multiSource": false,
+      "highCredSource": true,
+      "noConflict": false,
+      "dateChecked": true,
+      "contextOk": false
+    },
+    "verifiedBy": "",
+    "verifiedDate": "",
+    "createdAt": "2026-06-18T00:00:02.000Z",
+    "updatedAt": "2026-06-18T00:00:02.000Z"
+  },
+  {
+    "id": "44444444-4444-4444-8444-444444444444",
+    "title": "寝かしつけのルーティン（入浴→授乳→暗くする）",
+    "category": "睡眠・ルーティン",
+    "stance": "info",
+    "status": "unverified",
+    "conclusion": "毎日同じ流れ（入浴 → 授乳/ミルク → 部屋を暗く静かに）を作ると入眠しやすい、という育児書・体験談ベースの情報。要裏取り。",
+    "detail": "個人ブログで見かけたメモ。月齢や個人差が大きいはずなので、小児科や公的な育児情報で裏を取りたい。\n\nTODO: 厚労省や自治体の育児情報、信頼できる小児科監修記事を確認する。",
+    "conflictNotes": "",
+    "tags": [
+      "ねんね",
+      "ルーティン",
+      "TODO"
+    ],
+    "sources": [
+      {
+        "title": "個人の育児ブログ（出典メモのみ）",
+        "url": "",
+        "type": "口コミ・SNS",
+        "credibility": "low",
+        "accessedDate": "2026-06-18",
+        "note": "裏取り前。公的・専門家ソースで確認が必要"
+      }
+    ],
+    "checklist": {
+      "multiSource": false,
+      "highCredSource": false,
+      "noConflict": false,
+      "dateChecked": false,
+      "contextOk": false
+    },
+    "verifiedBy": "",
+    "verifiedDate": "",
+    "createdAt": "2026-06-18T00:00:03.000Z",
+    "updatedAt": "2026-06-18T00:00:03.000Z"
+  }
+]
