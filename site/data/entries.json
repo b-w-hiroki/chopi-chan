@@ -153,5 +153,305 @@
     "verifiedDate": "",
     "createdAt": "2026-06-18T00:00:03.000Z",
     "updatedAt": "2026-06-18T00:00:03.000Z"
+  },
+  {
+    "id": "55555555-5555-4555-8555-555555555555",
+    "title": "妊娠がわかったら『妊娠届』を提出（母子健康手帳・受診票の交付）",
+    "category": "手続き・制度",
+    "stance": "recommend",
+    "status": "verified",
+    "conclusion": "産科で妊娠が確認できたら、住んでいる市区町村に妊娠届を提出。母子健康手帳と、妊婦健診の費用助成（受診票）、出産・子育て応援給付の案内が受けられる。",
+    "detail": "窓口は市区町村の役所・保健センターなど。本人確認書類・マイナンバーが必要な場合がある。\n\nこのタイミングで案内される主なもの:\n・母子健康手帳\n・妊婦健診の受診票（補助券）\n・出産・子育て応援交付金（妊娠届時の給付）の面談/申請\n窓口で「これから受けられる助成・手続き」を一通り確認しておくと取りこぼしが減る。",
+    "conflictNotes": "必要書類・窓口・面談の有無は自治体で異なるため、お住まいの市区町村で確認。",
+    "tags": ["妊娠届", "母子手帳", "自治体", "手続き"],
+    "sources": [
+      {
+        "title": "こども家庭庁／厚生労働省（母子保健・母子健康手帳）",
+        "url": "https://www.cfa.go.jp/policies/boshihoken",
+        "type": "公的機関",
+        "credibility": "high",
+        "accessedDate": "2026-06-20",
+        "note": "妊娠届と母子健康手帳交付の根拠"
+      },
+      {
+        "title": "お住まいの市区町村（要確認）",
+        "url": "",
+        "type": "公的機関",
+        "credibility": "high",
+        "accessedDate": "2026-06-20",
+        "note": "窓口・必要書類は自治体ごとに確認"
+      }
+    ],
+    "checklist": { "multiSource": true, "highCredSource": true, "noConflict": true, "dateChecked": true, "contextOk": false },
+    "verifiedBy": "",
+    "verifiedDate": "",
+    "createdAt": "2026-06-20T00:00:00.000Z",
+    "updatedAt": "2026-06-20T00:00:00.000Z"
+  },
+  {
+    "id": "66666666-6666-4666-8666-666666666666",
+    "title": "妊婦健診の費用助成（受診票・補助券）",
+    "category": "手続き・制度",
+    "stance": "recommend",
+    "status": "recheck",
+    "conclusion": "妊婦健診は公費助成の受診票が使える（標準で14回程度が目安）。助成の回数・上限額は自治体・年度で異なる。",
+    "detail": "妊娠届の際に受診票が交付される。県外（里帰り先など）で受診した分は、いったん自己負担して後から申請する『償還払い』になることがある。\n\nTODO: 自分の自治体の助成回数・上限額・里帰り受診の扱いを確認する。",
+    "conflictNotes": "助成回数・金額・対象範囲は自治体差が大きく、年度改定もあるため最新を要確認。",
+    "tags": ["妊婦健診", "受診票", "助成", "里帰り"],
+    "sources": [
+      {
+        "title": "厚生労働省（妊婦健康診査の公費負担）",
+        "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kodomo/kodomo_kosodate/boshi-hoken/index.html",
+        "type": "公的機関",
+        "credibility": "high",
+        "accessedDate": "2026-06-20",
+        "note": "妊婦健診の公費助成の枠組み"
+      },
+      {
+        "title": "お住まいの市区町村（回数・金額の実額）",
+        "url": "",
+        "type": "公的機関",
+        "credibility": "high",
+        "accessedDate": "2026-06-20",
+        "note": "実際の助成内容は自治体で確認"
+      }
+    ],
+    "checklist": { "multiSource": true, "highCredSource": true, "noConflict": false, "dateChecked": false, "contextOk": false },
+    "verifiedBy": "",
+    "verifiedDate": "",
+    "createdAt": "2026-06-20T00:00:01.000Z",
+    "updatedAt": "2026-06-20T00:00:01.000Z"
+  },
+  {
+    "id": "77777777-7777-4777-8777-777777777777",
+    "title": "出産・子育て応援交付金（計10万円相当の給付）",
+    "category": "手続き・制度",
+    "stance": "recommend",
+    "status": "recheck",
+    "conclusion": "妊娠届時と出生届時に、それぞれ5万円相当（合わせて10万円相当）の給付を受けられる仕組み。面談やアンケート・申請が条件になることが多い。",
+    "detail": "『出産応援ギフト』『子育て応援ギフト』などと呼ばれる。受け取り方（現金・クーポン・電子マネー等）や申請方法は自治体で異なる。\n\nTODO: 妊娠届・出生届のときに、給付の申請を忘れず行う。",
+    "conflictNotes": "金額・形式・申請方法・制度名は自治体および年度で異なる。今後の制度改定で変わる可能性があるため要確認。",
+    "tags": ["出産応援", "子育て応援", "給付金", "自治体"],
+    "sources": [
+      {
+        "title": "こども家庭庁（出産・子育て応援交付金／伴走型相談支援）",
+        "url": "https://www.cfa.go.jp/policies/shussan-kosodate-kufukin",
+        "type": "公的機関",
+        "credibility": "high",
+        "accessedDate": "2026-06-20",
+        "note": "国の制度概要。実施は各自治体"
+      },
+      {
+        "title": "お住まいの市区町村（金額・申請方法）",
+        "url": "",
+        "type": "公的機関",
+        "credibility": "high",
+        "accessedDate": "2026-06-20",
+        "note": "運用は自治体ごとに確認"
+      }
+    ],
+    "checklist": { "multiSource": true, "highCredSource": true, "noConflict": false, "dateChecked": false, "contextOk": false },
+    "verifiedBy": "",
+    "verifiedDate": "",
+    "createdAt": "2026-06-20T00:00:02.000Z",
+    "updatedAt": "2026-06-20T00:00:02.000Z"
+  },
+  {
+    "id": "88888888-8888-4888-8888-888888888888",
+    "title": "出産育児一時金（原則50万円）",
+    "category": "手続き・制度",
+    "stance": "recommend",
+    "status": "verified",
+    "conclusion": "健康保険から、出産時に原則50万円が支給される（産科医療補償制度の対象となる出産の場合）。多くは『直接支払制度』で医療機関へ直接支払われる。",
+    "detail": "産科医療補償制度の対象外の出産などは48.8万円。出産費用が一時金より安ければ差額を申請して受け取れ、高ければ差額を支払う。被保険者本人の出産でも、扶養家族（配偶者など）の出産でも対象。\n\n手続きは出産する医療機関や加入している健康保険（協会けんぽ・健保組合・国保）で確認。",
+    "conflictNotes": "支給額は改定されることがある（2023年4月に42万円→50万円へ引き上げ）。最新額は加入先の健康保険で確認。",
+    "tags": ["出産育児一時金", "健康保険", "出産費用", "直接支払制度"],
+    "sources": [
+      {
+        "title": "全国健康保険協会（協会けんぽ）出産育児一時金",
+        "url": "https://www.kyoukaikenpo.or.jp/g3/cat310/sb3160/",
+        "type": "公的機関",
+        "credibility": "high",
+        "accessedDate": "2026-06-20",
+        "note": "金額・直接支払制度・対象の説明"
+      }
+    ],
+    "checklist": { "multiSource": false, "highCredSource": true, "noConflict": true, "dateChecked": true, "contextOk": false },
+    "verifiedBy": "",
+    "verifiedDate": "",
+    "createdAt": "2026-06-20T00:00:03.000Z",
+    "updatedAt": "2026-06-20T00:00:03.000Z"
+  },
+  {
+    "id": "99999999-9999-4999-8999-999999999999",
+    "title": "出産手当金（産休中の所得補償・健康保険）",
+    "category": "手続き・制度",
+    "stance": "info",
+    "status": "verified",
+    "conclusion": "健康保険の被保険者本人が、産前42日・産後56日の休業期間中、標準報酬日額の3分の2相当を受給できる（勤務先の健康保険から）。",
+    "detail": "会社員・公務員など、勤務先の健康保険に加入している人が対象。国民健康保険には原則ない。申請は勤務先経由で行うのが一般的。\n\n『出産育児一時金』（出産費用の補助）とは別物。出産手当金は“休んでいる間の給与の代わり”。",
+    "conflictNotes": "退職予定・任意継続の場合の扱いは条件があるため、勤務先・健保に確認。",
+    "tags": ["出産手当金", "産休", "健康保険", "所得補償"],
+    "sources": [
+      {
+        "title": "全国健康保険協会（協会けんぽ）出産手当金",
+        "url": "https://www.kyoukaikenpo.or.jp/g3/cat310/sb3170/",
+        "type": "公的機関",
+        "credibility": "high",
+        "accessedDate": "2026-06-20",
+        "note": "支給期間・支給額の計算"
+      }
+    ],
+    "checklist": { "multiSource": false, "highCredSource": true, "noConflict": true, "dateChecked": true, "contextOk": false },
+    "verifiedBy": "",
+    "verifiedDate": "",
+    "createdAt": "2026-06-20T00:00:04.000Z",
+    "updatedAt": "2026-06-20T00:00:04.000Z"
+  },
+  {
+    "id": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+    "title": "育児休業給付金（雇用保険）と出生後の支援給付",
+    "category": "手続き・制度",
+    "stance": "info",
+    "status": "recheck",
+    "conclusion": "雇用保険の被保険者が育児休業中に受け取る給付。原則、休業開始から180日までは賃金の67%、その後は50%。一定要件を満たすと『出生後休業支援給付』により実質的に手取り10割相当となる仕組みもある。",
+    "detail": "受給には被保険者期間などの要件がある。両親がともに育休を取得しやすくする方向で制度の拡充・改定が続いている分野。\n\nTODO: 自分が要件を満たすか、給付率・期間の最新を、勤務先またはハローワークで確認する。",
+    "conflictNotes": "給付率・要件・特例（出生後休業支援給付など）は改定が続くため、必ず最新情報を確認すること。",
+    "tags": ["育児休業給付金", "雇用保険", "育休", "ハローワーク"],
+    "sources": [
+      {
+        "title": "厚生労働省（育児休業給付）",
+        "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyouhoken/ikuji.html",
+        "type": "公的機関",
+        "credibility": "high",
+        "accessedDate": "2026-06-20",
+        "note": "給付率・要件。改定があるため要最新確認"
+      }
+    ],
+    "checklist": { "multiSource": false, "highCredSource": true, "noConflict": false, "dateChecked": false, "contextOk": false },
+    "verifiedBy": "",
+    "verifiedDate": "",
+    "createdAt": "2026-06-20T00:00:05.000Z",
+    "updatedAt": "2026-06-20T00:00:05.000Z"
+  },
+  {
+    "id": "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb",
+    "title": "出生届は出生日を含め14日以内に提出（期限あり）",
+    "category": "手続き・制度",
+    "stance": "caution",
+    "status": "verified",
+    "conclusion": "赤ちゃんが生まれたら、出生日を含めて14日以内に市区町村へ出生届を提出する。医師・助産師が記入した出生証明書が必要。",
+    "detail": "提出先は本籍地・所在地（住んでいる場所）・出生地のいずれかの市区町村。里帰り出産でも提出できる。\n\n出生届と前後して進めたい手続き:\n・子を健康保険に加入（扶養追加）\n・児童手当の申請\n・乳幼児/子ども医療費助成の申請\nまとめて窓口で確認するとスムーズ。",
+    "conflictNotes": "",
+    "tags": ["出生届", "期限", "14日以内", "出生証明書"],
+    "sources": [
+      {
+        "title": "法務省（出生届）",
+        "url": "https://www.moj.go.jp/MINJI/minji01_00025.html",
+        "type": "公的機関",
+        "credibility": "high",
+        "accessedDate": "2026-06-20",
+        "note": "提出期限・提出先・必要書類"
+      }
+    ],
+    "checklist": { "multiSource": false, "highCredSource": true, "noConflict": true, "dateChecked": true, "contextOk": true },
+    "verifiedBy": "",
+    "verifiedDate": "",
+    "createdAt": "2026-06-20T00:00:06.000Z",
+    "updatedAt": "2026-06-20T00:00:06.000Z"
+  },
+  {
+    "id": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+    "title": "児童手当の申請（出生後はできるだけ早く）",
+    "category": "手続き・制度",
+    "stance": "recommend",
+    "status": "recheck",
+    "conclusion": "出生後、市区町村に児童手当を申請する。原則として申請した月の翌月分から支給され、さかのぼって受け取れないため、出生から15日以内を目安に早めに申請する。",
+    "detail": "2024年10月から、所得制限の撤廃・高校生年代までの支給・第3子以降の増額など、制度が拡充された。金額・対象は最新情報を確認。\n\n出生届と同じタイミングで窓口に行くと手続きをまとめやすい。",
+    "conflictNotes": "2024年の拡充内容が反映されていない古い情報も出回るため、金額・対象は最新を要確認。",
+    "tags": ["児童手当", "申請", "15日以内", "こども家庭庁"],
+    "sources": [
+      {
+        "title": "こども家庭庁（児童手当制度）",
+        "url": "https://www.cfa.go.jp/policies/kokoseido/jidouteate",
+        "type": "公的機関",
+        "credibility": "high",
+        "accessedDate": "2026-06-20",
+        "note": "制度概要・拡充内容"
+      },
+      {
+        "title": "お住まいの市区町村（申請窓口）",
+        "url": "",
+        "type": "公的機関",
+        "credibility": "high",
+        "accessedDate": "2026-06-20",
+        "note": "申請方法・必要書類"
+      }
+    ],
+    "checklist": { "multiSource": true, "highCredSource": true, "noConflict": false, "dateChecked": false, "contextOk": false },
+    "verifiedBy": "",
+    "verifiedDate": "",
+    "createdAt": "2026-06-20T00:00:07.000Z",
+    "updatedAt": "2026-06-20T00:00:07.000Z"
+  },
+  {
+    "id": "dddddddd-dddd-4ddd-8ddd-dddddddddddd",
+    "title": "乳幼児・子ども医療費助成",
+    "category": "手続き・制度",
+    "stance": "recommend",
+    "status": "recheck",
+    "conclusion": "子どもの医療費の自己負担分を自治体が助成する制度。対象年齢・自己負担の有無・所得制限は自治体で大きく異なる。出生届・保険加入後に申請する。",
+    "detail": "申請には子どもの健康保険証が必要になることが多いので、先に健康保険への加入を済ませておくとよい。\n\nTODO: 自分の自治体の対象年齢・負担額・所得制限を確認する。",
+    "conflictNotes": "対象年齢（就学前〜18歳など）・自己負担・所得制限は自治体差が非常に大きい。",
+    "tags": ["子ども医療費", "乳幼児医療", "助成", "自治体"],
+    "sources": [
+      {
+        "title": "お住まいの市区町村（子ども医療費助成）",
+        "url": "",
+        "type": "公的機関",
+        "credibility": "high",
+        "accessedDate": "2026-06-20",
+        "note": "制度内容は自治体ごとに確認"
+      }
+    ],
+    "checklist": { "multiSource": false, "highCredSource": true, "noConflict": false, "dateChecked": false, "contextOk": false },
+    "verifiedBy": "",
+    "verifiedDate": "",
+    "createdAt": "2026-06-20T00:00:08.000Z",
+    "updatedAt": "2026-06-20T00:00:08.000Z"
+  },
+  {
+    "id": "eeeeeeee-eeee-4eee-8eee-eeeeeeeeeeee",
+    "title": "子どもを健康保険に加入させる（扶養追加）",
+    "category": "手続き・制度",
+    "stance": "recommend",
+    "status": "verified",
+    "conclusion": "出生後すみやかに、親の健康保険に子どもを加入（扶養追加）する。子ども医療費助成の申請にも子の保険証が必要になることが多い。",
+    "detail": "会社員などは勤務先の健康保険（健保組合・協会けんぽ）で扶養追加。自営業などは市区町村の国民健康保険で加入手続き。\n\n出生届 → 健康保険加入 → 子ども医療費助成、の順で進めると流れがよい。",
+    "conflictNotes": "夫婦どちらの扶養に入れるかは収入等で判断が必要な場合がある。勤務先・健保に確認。",
+    "tags": ["健康保険", "扶養追加", "保険証", "出生後"],
+    "sources": [
+      {
+        "title": "全国健康保険協会（協会けんぽ）被扶養者の手続き",
+        "url": "https://www.kyoukaikenpo.or.jp/g3/cat320/sb3170/",
+        "type": "公的機関",
+        "credibility": "high",
+        "accessedDate": "2026-06-20",
+        "note": "扶養追加の手続きの考え方"
+      },
+      {
+        "title": "勤務先または市区町村（国保）",
+        "url": "",
+        "type": "公的機関",
+        "credibility": "high",
+        "accessedDate": "2026-06-20",
+        "note": "加入先により窓口が異なる"
+      }
+    ],
+    "checklist": { "multiSource": true, "highCredSource": true, "noConflict": true, "dateChecked": true, "contextOk": false },
+    "verifiedBy": "",
+    "verifiedDate": "",
+    "createdAt": "2026-06-20T00:00:09.000Z",
+    "updatedAt": "2026-06-20T00:00:09.000Z"
   }
 ]

@@ -420,8 +420,30 @@ async function importData(file) {
   alert(`${added}件を読み込みました（重複IDはスキップ）`);
 }
 
+// 同梱サンプル（data/entries.json）のうち、まだ無いものだけ取り込む
+async function mergeSeed() {
+  let seed;
+  try { seed = await fetch('data/entries.json', { cache: 'no-store' }).then((r) => r.json()); }
+  catch { return alert('サンプルの取得に失敗しました'); }
+  if (!Array.isArray(seed)) return alert('サンプルの形式が不正です');
+  const ids = new Set(ENTRIES.map((e) => e.id));
+  let added = 0;
+  seed.forEach((item) => {
+    if (item.id && ids.has(item.id)) return;
+    const entry = normalizeEntry(item);
+    entry.id = item.id || uuid();
+    entry.createdAt = item.createdAt || now();
+    entry.updatedAt = now();
+    ENTRIES.push(entry);
+    added++;
+  });
+  if (added) { persist(); render(); }
+  alert(added ? `${added}件のサンプルを取り込みました（既存のメモはそのままです）` : '取り込む新しいサンプルはありませんでした');
+}
+
 // ---- イベント ----
 $('#addBtn').addEventListener('click', () => openEditor(null));
+$('#seedBtn').addEventListener('click', mergeSeed);
 $('#cancelBtn').addEventListener('click', () => closeOverlay('#editorOverlay'));
 $('#deleteBtn').addEventListener('click', deleteEntry);
 $('#editorForm').addEventListener('submit', saveEntry);
