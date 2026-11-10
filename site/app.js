@@ -100,6 +100,8 @@ function normalizeEntry(input, existing = null) {
     note: String(s.note ?? '').trim(),
   })) : (e.sources || []);
   e.checklist = (input.checklist && typeof input.checklist === 'object') ? input.checklist : (e.checklist || {});
+  e.policyYear = String(input.policyYear ?? e.policyYear ?? '').trim();
+  e.reviewAfter = String(input.reviewAfter ?? e.reviewAfter ?? '').trim();
   e.verifiedBy = String(input.verifiedBy ?? e.verifiedBy ?? '').trim();
   e.verifiedDate = String(input.verifiedDate ?? e.verifiedDate ?? '').trim();
   return e;
@@ -133,6 +135,7 @@ function assessVerification(entry) {
   return { issues, ok: issues.length === 0 };
 }
 function needsAttention(entry) {
+  if (ChopiFreshness.assess(entry).issues.length) return true;
   if (['unverified', 'reviewing', 'recheck', 'disputed'].includes(entry.status)) return true;
   if (entry.status === 'verified' && !assessVerification(entry).ok) return true;
   return false;
@@ -213,6 +216,7 @@ function render() {
     const meta = el('div', { class: 'meta-line' }, [
       el('span', { class: 'tag', text: e.category }),
       ...(e.tags || []).slice(0, 4).map((t) => el('span', { class: 'tag', text: '#' + t })),
+      el('span', { class: 'freshness-note', text: ChopiFreshness.assess(e).summary }),
       el('span', { text: `出典 ${(e.sources || []).length}件` }),
     ]);
     if (e.status !== 'rejected' && assess.issues.length) {
@@ -234,6 +238,9 @@ function openDetail(id) {
   m.appendChild(el('div', { class: 'card-top' }, [
     el('h2', { text: e.title, style: 'flex:1' }), stanceBadge(e.stance), statusBadge(e.status),
   ]));
+  const freshness = ChopiFreshness.assess(e);
+  m.appendChild(el('div', { class: 'health-banner', text: freshness.summary + '。' + (freshness.issues.join(' / ') || '日付の記録あり。正確性や現在の適用を保証しません。') }));
+  m.appendChild(el('p', { class: 'verify-hint', text: '検証状態・信頼度・確認日は登録者の記録です。医療判断は医療機関へ、制度の対象・金額・期限は公的窓口で確認してください。' }));
   if (e.conclusion) m.appendChild(el('div', { class: 'detail-section' }, [el('h4', { text: '要点' }), el('div', { text: e.conclusion })]));
   m.appendChild(el('div', { class: 'meta-line', style: 'margin-bottom:14px' }, [
     el('span', { class: 'tag', text: e.category }),
@@ -257,7 +264,7 @@ function openDetail(id) {
         ]),
         el('div', { style: 'margin-top:4px;font-weight:600' }, [s.title || '(無題)']),
         s.url ? el('div', {}, [el('a', { href: s.url, target: '_blank', rel: 'noopener', text: s.url })]) : null,
-        s.accessedDate ? el('div', { class: 'verify-hint', text: '確認日: ' + s.accessedDate }) : null,
+        el('div', { class: 'verify-hint', text: '出典の確認日（登録値）: ' + (s.accessedDate || '未記録') }),
         s.note ? el('div', { class: 'verify-hint', text: s.note }) : null,
       ]));
     });
@@ -281,7 +288,7 @@ function openDetail(id) {
   }
   const footMeta = [];
   if (e.verifiedBy || e.verifiedDate) footMeta.push(`検証: ${e.verifiedBy || '—'} / ${e.verifiedDate || '—'}`);
-  footMeta.push(`更新: ${(e.updatedAt || '').slice(0, 10)}`);
+  footMeta.push(`メモ更新（内容の確認日ではありません）: ${(e.updatedAt || '').slice(0, 10)}`);
   m.appendChild(el('div', { class: 'verify-hint', style: 'margin-top:8px', text: footMeta.join('　') }));
 
   m.appendChild(el('div', { class: 'modal-foot' }, [
@@ -352,6 +359,8 @@ function openEditor(id = null) {
   form.conflictNotes.value = e?.conflictNotes || '';
   form.verifiedBy.value = e?.verifiedBy || '';
   form.verifiedDate.value = e?.verifiedDate || '';
+  form.policyYear.value = e?.policyYear || '';
+  form.reviewAfter.value = e?.reviewAfter || '';
   (e?.sources || []).forEach((s) => $('#sourcesList').appendChild(sourceRow(s)));
   renderChecklist(e?.checklist || {});
   updateSourceHint();
@@ -368,6 +377,7 @@ function saveEntry(ev) {
     detail: form.detail.value,
     tags: form.tags.value.split(',').map((t) => t.trim()).filter(Boolean),
     sources: gatherSources(), checklist, conflictNotes: form.conflictNotes.value,
+    policyYear: form.policyYear.value, reviewAfter: form.reviewAfter.value,
     verifiedBy: form.verifiedBy.value, verifiedDate: form.verifiedDate.value,
   };
   if (!payload.title.trim()) { alert('タイトルは必須です'); return; }
