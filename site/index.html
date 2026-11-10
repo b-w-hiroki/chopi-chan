@@ -106,10 +106,12 @@
           </div>
           <div class="field">
             <label>検証日</label>
-            <input type="text" name="verifiedDate" placeholder="例：2026-06-18" />
+            <input type="text" name="verifiedDate" placeholder="実際に確認した日 YYYY-MM-DD" />
           </div>
         </div>
 
+        <label>適用年度（制度のみ。未確認なら空欄）<input type="text" name="policyYear" placeholder="例：2026年度・自治体名" /></label>
+        <label>次回確認期限（任意）<input type="date" name="reviewAfter" /></label>
         <div class="modal-foot">
           <button type="button" id="deleteBtn" class="btn danger" hidden>削除</button>
           <button type="button" id="cancelBtn" class="btn ghost">キャンセル</button>
@@ -124,6 +126,7 @@
     <div class="modal" id="detailModal"></div>
   </div>
 
+  <script src="freshness.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
